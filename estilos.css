@@ -28,29 +28,15 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
-}
-
-/* Scrollbar personalizada */
-::-webkit-scrollbar {
-  width: 6px;
-  height: 6px;
-}
-::-webkit-scrollbar-track {
-  background: var(--bg-core);
-}
-::-webkit-scrollbar-thumb {
-  background: var(--border-dim);
-  border-radius: 3px;
-}
-::-webkit-scrollbar-thumb:hover {
-  background: var(--red-accent);
+  width: 100%;
+  overflow-x: hidden;
 }
 
 /* ========================================================
    HEADER & NAVBAR PRINCIPAL (index.html)
    ======================================================== */
 .nav-shell {
-  background: rgba(16, 18, 23, 0.85);
+  background: rgba(16, 18, 23, 0.95);
   backdrop-filter: blur(14px);
   border-bottom: 1px solid var(--border-dim);
   position: sticky;
@@ -59,22 +45,24 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0.9rem 2.5rem;
+  padding: 0.8rem 1.2rem;
+  flex-wrap: wrap;
+  gap: 10px;
 }
 
 .nav-brand {
   display: flex;
   align-items: center;
-  gap: 10px;
-  font-size: 0.95rem;
+  gap: 8px;
+  font-size: 0.9rem;
   font-weight: 700;
   color: var(--text-main);
-  letter-spacing: 0.5px;
+  white-space: nowrap;
 }
 
 .brand-dot {
-  width: 9px;
-  height: 9px;
+  width: 8px;
+  height: 8px;
   background-color: var(--red-bright);
   border-radius: 50%;
   box-shadow: 0 0 10px var(--red-glow);
@@ -84,20 +72,25 @@ body {
   display: flex;
   gap: 6px;
   list-style: none;
+  overflow-x: auto;
+  padding-bottom: 2px;
+  -webkit-overflow-scrolling: touch;
 }
 
 .nav-links a {
   color: var(--text-muted);
   text-decoration: none;
-  font-size: 0.88rem;
+  font-size: 0.82rem;
   font-weight: 500;
-  padding: 0.5rem 1.1rem;
-  border-radius: 8px;
+  padding: 0.45rem 0.85rem;
+  border-radius: 6px;
   transition: all 0.2s ease;
   border: 1px solid transparent;
+  white-space: nowrap;
 }
 
-.nav-links a:hover {
+.nav-links a:hover,
+.nav-links a:focus {
   color: #ffffff;
   background: var(--bg-card);
   border-color: var(--border-dim);
@@ -109,7 +102,7 @@ body {
 .workspace {
   max-width: 980px;
   margin: 0 auto;
-  padding: 2.8rem 1.5rem;
+  padding: 1.8rem 1rem;
 }
 
 /* ========================================================
@@ -117,7 +110,7 @@ body {
    ======================================================== */
 .bento-hero {
   display: grid;
-  grid-template-columns: 1.8fr 1.2fr;
+  grid-template-columns: 1.6fr 1.2fr;
   gap: 1.2rem;
   margin-bottom: 1.2rem;
 }
@@ -126,14 +119,9 @@ body {
   background: var(--bg-card);
   border: 1px solid var(--border-dim);
   border-radius: 14px;
-  padding: 2rem;
+  padding: 1.8rem 1.4rem;
   position: relative;
   overflow: hidden;
-  transition: border-color 0.25s, transform 0.25s;
-}
-
-.bento-card:hover {
-  border-color: var(--border-focus);
 }
 
 .bento-badge {
@@ -145,86 +133,79 @@ body {
   border: 1px solid rgba(230, 0, 38, 0.25);
   padding: 0.25rem 0.75rem;
   border-radius: 20px;
-  font-size: 0.78rem;
+  font-size: 0.75rem;
   font-weight: 600;
-  margin-bottom: 1.2rem;
+  margin-bottom: 1rem;
+  word-break: break-word;
 }
 
 .bento-card h1 {
-  font-size: 2.2rem;
+  font-size: 1.8rem;
   font-weight: 700;
   color: #ffffff;
-  margin-bottom: 0.5rem;
-  letter-spacing: -0.5px;
+  margin-bottom: 0.6rem;
+  line-height: 1.25;
+  word-break: break-word;
 }
 
 .bento-card p {
   color: var(--text-muted);
-  font-size: 0.94rem;
-  line-height: 1.6;
+  font-size: 0.92rem;
+  line-height: 1.55;
 }
 
-/* Consola interactiva lateral */
 .terminal-card {
   background: #0d0f14;
   border: 1px solid var(--border-dim);
   border-radius: 14px;
-  padding: 1.5rem;
+  padding: 1.2rem;
   font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
 }
 
 .terminal-header {
   display: flex;
   gap: 6px;
-  margin-bottom: 1rem;
+  margin-bottom: 0.8rem;
 }
 
 .t-dot {
-  width: 10px;
-  height: 10px;
+  width: 9px;
+  height: 9px;
   border-radius: 50%;
   background: #2b303c;
 }
 .t-dot.red { background: #ff5f56; }
 
 .terminal-body {
-  font-size: 0.82rem;
+  font-size: 0.8rem;
   color: var(--text-muted);
+  word-break: break-word;
 }
 
-.terminal-body span.cmd {
-  color: var(--red-bright);
-}
-.terminal-body span.val {
-  color: #ffffff;
-}
+.terminal-body span.cmd { color: var(--red-bright); }
+.terminal-body span.val { color: #ffffff; }
 
-/* Acciones principales */
 .action-cluster {
   display: flex;
+  flex-wrap: wrap;
   gap: 0.8rem;
-  margin-top: 1.8rem;
+  margin-top: 1.5rem;
 }
 
 .btn-pill {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 8px;
   background: var(--red-accent);
   color: #ffffff;
   text-decoration: none;
-  font-size: 0.88rem;
+  font-size: 0.86rem;
   font-weight: 600;
-  padding: 0.65rem 1.4rem;
+  padding: 0.65rem 1.2rem;
   border-radius: 8px;
   transition: all 0.2s ease;
   border: 1px solid var(--red-accent);
-}
-
-.btn-pill:hover {
-  background: var(--red-bright);
-  box-shadow: 0 4px 18px var(--red-glow);
-  transform: translateY(-1px);
 }
 
 .btn-pill.ghost {
@@ -233,35 +214,23 @@ body {
   color: var(--text-main);
 }
 
-.btn-pill.ghost:hover {
-  background: var(--bg-card-hover);
-  border-color: var(--red-accent);
-}
-
-/* Rejilla de competencias */
 .quad-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 1.2rem;
+  gap: 1rem;
 }
 
 .quad-item {
   background: var(--bg-card);
   border: 1px solid var(--border-dim);
   border-radius: 12px;
-  padding: 1.5rem;
-  transition: all 0.25s;
-}
-
-.quad-item:hover {
-  border-color: var(--border-focus);
-  transform: translateY(-2px);
+  padding: 1.2rem;
 }
 
 .quad-item h3 {
-  font-size: 1.05rem;
+  font-size: 0.98rem;
   color: #ffffff;
-  margin-bottom: 0.6rem;
+  margin-bottom: 0.5rem;
   display: flex;
   align-items: center;
   gap: 8px;
@@ -277,65 +246,219 @@ body {
 }
 
 .quad-item p {
-  font-size: 0.88rem;
+  font-size: 0.85rem;
   color: var(--text-muted);
 }
 
 /* ========================================================
-   SOBRE MÍ (sobre.html) - Split Layout Asimétrico
+   SOBRE MÍ (sobre.html)
    ======================================================== */
 .profile-split {
   display: grid;
-  grid-template-columns: 290px 1fr;
-  gap: 1.5rem;
+  grid-template-columns: 280px 1fr;
+  gap: 1.2rem;
 }
 
 .profile-sidebar {
   background: var(--bg-card);
   border: 1px solid var(--border-dim);
   border-radius: 14px;
-  padding: 1.8rem;
+  padding: 1.5rem;
   height: fit-content;
 }
 
 .sidebar-avatar {
-  width: 70px;
-  height: 70px;
-  border-radius: 14px;
+  width: 60px;
+  height: 60px;
+  border-radius: 12px;
   background: linear-gradient(135deg, var(--bg-core) 0%, #201317 100%);
   border: 1px solid var(--red-accent);
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.4rem;
+  font-size: 1.3rem;
   font-weight: 700;
   color: var(--red-bright);
-  margin-bottom: 1.2rem;
+  margin-bottom: 1rem;
 }
 
 .profile-sidebar h2 {
-  font-size: 1.2rem;
+  font-size: 1.15rem;
   color: #ffffff;
 }
 
 .profile-sidebar .degree {
-  font-size: 0.84rem;
+  font-size: 0.82rem;
   color: var(--red-bright);
   font-weight: 500;
-  margin-bottom: 1.2rem;
+  margin-bottom: 1rem;
 }
 
 .meta-row {
   border-top: 1px solid var(--border-dim);
-  padding: 0.8rem 0;
+  padding: 0.7rem 0;
 }
 
 .meta-label {
-  font-size: 0.72rem;
+  font-size: 0.7rem;
   text-transform: uppercase;
   color: var(--text-dark);
   font-weight: 700;
-  letter-spacing: 0.5px;
 }
 
-.meta
+.meta-value {
+  font-size: 0.84rem;
+  color: var(--text-main);
+  margin-top: 2px;
+}
+
+.timeline-block {
+  background: var(--bg-card);
+  border: 1px solid var(--border-dim);
+  border-radius: 14px;
+  padding: 1.4rem;
+  margin-bottom: 1rem;
+}
+
+.timeline-block h3 {
+  font-size: 1.05rem;
+  color: #ffffff;
+  margin-bottom: 0.3rem;
+}
+
+.period-tag {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--red-accent);
+  margin-bottom: 0.6rem;
+}
+
+.timeline-block p {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  margin-bottom: 0.8rem;
+}
+
+.pill-matrix {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.pill-matrix span {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--border-dim);
+  color: var(--text-muted);
+  font-size: 0.72rem;
+  padding: 0.2rem 0.55rem;
+  border-radius: 6px;
+}
+
+/* ========================================================
+   PORTAFOLIO VIEWER (portafolio.html)
+   ======================================================== */
+.portafolio-shell {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100%;
+  background: var(--bg-core);
+  overflow: hidden;
+}
+
+.practice-deck {
+  background: var(--bg-surface);
+  border-bottom: 1px solid var(--border-dim);
+  padding: 0.6rem 1rem;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  overflow-x: auto;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
+}
+
+.deck-title {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  color: var(--red-bright);
+}
+
+.deck-nav {
+  display: flex;
+  gap: 6px;
+  list-style: none;
+}
+
+.deck-nav a {
+  display: inline-block;
+  padding: 0.4rem 0.8rem;
+  font-size: 0.78rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  text-decoration: none;
+  border-radius: 6px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-dim);
+}
+
+.deck-nav a:hover,
+.deck-nav a:focus {
+  color: #ffffff;
+  background: var(--bg-card-hover);
+  border-color: var(--red-accent);
+}
+
+.deck-frame {
+  flex: 1;
+  width: 100%;
+  border: none;
+  background: #ffffff;
+}
+
+/* ========================================================
+   MEDIA QUERY MOVIL (Menor a 820px)
+   ======================================================== */
+@media (max-width: 820px) {
+  .nav-shell {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0.6rem 1rem;
+  }
+
+  .nav-links {
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .bento-hero {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .quad-grid {
+    grid-template-columns: 1fr;
+    gap: 0.8rem;
+  }
+
+  .profile-split {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .bento-card h1 {
+    font-size: 1.5rem;
+  }
+
+  .action-cluster {
+    flex-direction: column;
+  }
+
+  .btn-pill {
+    width: 100%;
+  }
+}
+
