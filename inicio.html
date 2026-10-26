@@ -1,47 +1,65 @@
 <!doctype html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inicio</title>
-    <link rel="stylesheet" href="estilos.css" />
-  </head>
-  <body>
-    <main class="pagina">
-      <section class="hero">
-        <div>
-          <h1>¡Bienvenido a mi portafolio!</h1>
-          <p><strong>Soy Francisco Castellanos Loreto</strong></p>
-          <p class="rol">
-            Estudiante de Ingeniería en Sistemas Computacionales
-          </p>
-          <p>
-            Bienvenido a mi repositorio técnico. Aquí encontrarás mi perfil académico, 
-            el catálogo de mis prácticas de laboratorio y mis proyectos enfocados en infraestructura, 
-            redes y desarrollo de software.
-          </p>
-          <div class="botones">
-            <a class="boton" href="sobre.html">Conóceme</a>
-            <a class="boton sec" href="portafolio.html">Ver prácticas</a>
-            <a class="boton sec" href="contacto.html">Contacto</a>
-          </div>
-        </div>
-      </section>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <main class="workspace">
+        
+        <!-- BENTO ROW 1: Hero + Live Terminal Status -->
+        <section class="bento-hero">
+            <div class="bento-card">
+                <span class="bento-badge">Ingeniería en Sistemas Computacionales</span>
+                <h1>Francisco Castellanos Loreto</h1>
+                <p>
+                    Séptimo semestre en el TecNM Campus Acapulco. Formación integral en infraestructura de telecomunicaciones, diseño de redes multicapa y desarrollo de software con control de versiones.
+                </p>
+                <div class="action-cluster">
+                    <a class="btn-pill" href="portafolio.html">Explorar Prácticas</a>
+                    <a class="btn-pill ghost" href="sobre.html">Ver Trayectoria</a>
+                </div>
+            </div>
 
-      <section class="tarjeta">
-        <h2>Áreas de Enfoque</h2>
-        <ul>
-          <li>
-            <strong>Redes Computacionales e Infraestructura:</strong> Topologías multicapa en Cisco Packet Tracer, enrutamiento dinámico (OSPF, EIGRP), conmutación Layer 3 y segmentación de tráfico por VLANs.
-          </li>
-          <li>
-            <strong>Desarrollo Web y Despliegue:</strong> Interfaces funcionales para proyectos de ingeniería con integración de control de versiones en GitHub y producción continua en Vercel.
-          </li>
-          <li>
-            <strong>Sistemas, Servidores y Hardware:</strong> Configuración de servidores de archivos en Ubuntu Server con permisos Samba estrictos, microcontroladores Arduino y comunicación serial industrial por Modbus RTU / RS-485.
-          </li>
-        </ul>
-      </section>
+            <div class="terminal-card">
+                <div class="terminal-header">
+                    <span class="t-dot red"></span>
+                    <span class="t-dot"></span>
+                    <span class="t-dot"></span>
+                </div>
+                <div class="terminal-body">
+                    <p><span class="cmd">sys:~$</span> whoami</p>
+                    <p><span class="val">&gt; Francisco Castellanos (Loreto)</span></p>
+                    <br>
+                    <p><span class="cmd">sys:~$</span> status --academic</p>
+                    <p><span class="val">&gt; 7mo Semestre (Matrícula: 23320783)</span></p>
+                    <p><span class="val">&gt; TecNM Campus Acapulco</span></p>
+                    <br>
+                    <p><span class="cmd">sys:~$</span> cat core_stack.txt</p>
+                    <p><span class="val">&gt; Cisco L3, VLANs, OSPF, Samba</span></p>
+                    <p><span class="val">&gt; Arduino PWM, RS-485, Web Dev</span></p>
+                </div>
+            </div>
+        </section>
+
+        <!-- BENTO ROW 2: 3 Módulos de especialidad -->
+        <section class="quad-grid">
+            <div class="quad-item">
+                <h3>Redes & Enrutamiento</h3>
+                <p>Topologías empresariales con Cisco Packet Tracer, enrutamiento dinámico OSPF y EIGRP, switches Layer 3 y redundancia de enlaces.</p>
+            </div>
+            <div class="quad-item">
+                <h3>Sistemas & Servidores</h3>
+                <p>Administración en Ubuntu Server 24.04 LTS, implementación de Samba SMB con políticas de solo lectura y control estricto de accesos.</p>
+            </div>
+            <div class="quad-item">
+                <h3>Hardware & Protocolos</h3>
+                <p>Integración de microcontroladores Arduino con señalización PWM y bus industrial RS-485 bajo el estándar Modbus RTU.</p>
+            </div>
+        </section>
+
     </main>
-  </body>
+</body>
 </html>
