@@ -1,139 +1,98 @@
 <!doctype html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sobre mí</title>
-    <link rel="stylesheet" href="estilos.css" />
-  </head>
-  <body>
-    <main class="pagina">
-      <section class="hero">
-        <div>
-          <h1>Sobre mí</h1>
-          <p><strong>Francisco Castellanos Loreto (Paco / Loreto)</strong></p>
-          <p class="rol">Ingeniería en Sistemas Computacionales</p>
-          <p>
-            Estudiante de 7° semestre de Ingeniería en Sistemas Computacionales en Acapulco, Guerrero. 
-            Me dedico a crear soluciones tecnológicas sólidas, integrando bases de telecomunicaciones, 
-            sistemas operativos tipo Linux y desarrollo de software aplicado a necesidades reales de la región.
-          </p>
-          <p>
-            Tengo un perfil orientado tanto a la capa lógica como a la infraestructura física: desde el bajo nivel 
-            en ensamblador y hardware programable hasta la configuración de conmutadores avanzados y servidores seguros.
-          </p>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <main class="workspace">
+        <div class="profile-split">
+            
+            <!-- Panel Lateral Fijo -->
+            <aside class="profile-sidebar">
+                <div class="sidebar-avatar">FC</div>
+                <h2>Francisco Castellanos</h2>
+                <p class="degree">Ing. en Sistemas Computacionales</p>
+
+                <div class="meta-row">
+                    <span class="meta-label">Institución</span>
+                    <p class="meta-value">TecNM Campus Acapulco</p>
+                </div>
+                <div class="meta-row">
+                    <span class="meta-label">Control</span>
+                    <p class="meta-value">23320783 · 7° Semestre</p>
+                </div>
+                <div class="meta-row">
+                    <span class="meta-label">Ubicación</span>
+                    <p class="meta-value">Acapulco, Guerrero, México</p>
+                </div>
+                <div class="meta-row">
+                    <span class="meta-label">Enfoque</span>
+                    <p class="meta-value">Infraestructura, Redes & Desarrollo</p>
+                </div>
+            </aside>
+
+            <!-- Bloques de Proyectos y Experiencia -->
+            <section>
+                <div class="timeline-block">
+                    <h3>Sistema de Prevención de Huracanes e Inundaciones</h3>
+                    <span class="period-tag">Desarrollo Web & Prevención Civil · 2026</span>
+                    <p>
+                        Plataforma interactiva adaptada a la orografía, zonas críticas y cuencas hidrológicas de Acapulco para el cálculo oportuno de rutas seguras de evacuación.
+                    </p>
+                    <div class="pill-matrix">
+                        <span>Mapeo Topográfico</span>
+                        <span>Gestión de Riesgo</span>
+                        <span>GitHub</span>
+                        <span>Vercel</span>
+                    </div>
+                </div>
+
+                <div class="timeline-block">
+                    <h3>Infraestructura de Red Multicapa Cisco</h3>
+                    <span class="period-tag">Telecomunicaciones · 2026</span>
+                    <p>
+                        Diseño y simulación de redes compuestas por conmutación Layer 3, segmentación estricta con VLANs, enlaces troncales y enrutamiento dinámico mediante protocolos OSPF y EIGRP.
+                    </p>
+                    <div class="pill-matrix">
+                        <span>Cisco Packet Tracer</span>
+                        <span>Inter-VLAN</span>
+                        <span>OSPF</span>
+                        <span>EIGRP</span>
+                    </div>
+                </div>
+
+                <div class="timeline-block">
+                    <h3>Servidor de Almacenamiento Seguro (Samba)</h3>
+                    <span class="period-tag">Administración de Sistemas · 2026</span>
+                    <p>
+                        Despliegue de un entorno virtualizado con Ubuntu Server 24.04 LTS configurado bajo permisos de solo lectura y cuotas estrictas de usuario para soporte a prácticas de laboratorio.
+                    </p>
+                    <div class="pill-matrix">
+                        <span>Ubuntu Server</span>
+                        <span>Samba SMB</span>
+                        <span>Linux ACL</span>
+                    </div>
+                </div>
+
+                <div class="timeline-block">
+                    <h3>Adquisición de Datos y Control Serial Modbus</h3>
+                    <span class="period-tag">Sistemas Programables · 2026</span>
+                    <p>
+                        Mapeo de registros y monitoreo de actuadores por PWM utilizando Arduino y bus serial RS-485 con implementación del protocolo industrial Modbus RTU.
+                    </p>
+                    <div class="pill-matrix">
+                        <span>Arduino</span>
+                        <span>RS-485</span>
+                        <span>Modbus RTU</span>
+                        <span>Ensamblador 8086</span>
+                    </div>
+                </div>
+            </section>
+
         </div>
-      </section>
-
-      <section class="tarjeta">
-        <h2>Experiencia y Proyectos Clave</h2>
-
-        <h3>Sistema de Prevención de Huracanes e Inundaciones</h3>
-        <p class="fecha">Desarrollo Web y Análisis Topográfico · 10/2026</p>
-        <ul>
-          <li>
-            Plataforma de software orientada a la evaluación de riesgos, mapeo de cuencas y zonas críticas adaptada a la orografía de Acapulco.
-          </li>
-          <li>
-            Despliegue y administración de versiones a través de GitHub con control modular.
-          </li>
-          <li>
-            Estructuración para consulta rápida de rutas de evacuación ante fenómenos hidrometeorológicos.
-          </li>
-        </ul>
-
-        <h3>Topología Multicapa Empresarial en Cisco</h3>
-        <p class="fecha">Infraestructura y Telecomunicaciones · 09/2026 – 10/2026</p>
-        <ul>
-          <li>
-            Diseño e implementación de arquitectura de red con switches Layer 3, transceptores y enlaces troncales en Cisco Packet Tracer.
-          </li>
-          <li>
-            Segmentación por VLANs, Inter-VLAN Routing y protocolos de enrutamiento dinámico por estado de enlace y vector distancia (OSPF, EIGRP, RIP).
-          </li>
-          <li>
-            Verificación de redundancia y control de dominios de colisión y difusión.
-          </li>
-        </ul>
-
-        <h3>Servidor de Almacenamiento Seguro (Samba)</h3>
-        <p class="fecha">Administración de Sistemas Operativos · 05/2026</p>
-        <ul>
-          <li>
-            Instalación y endurecimiento de una máquina virtual sobre Ubuntu Server 24.04 LTS.
-          </li>
-          <li>
-            Implementación del servicio Samba (SMB) con políticas de solo lectura y cuotas de disco para entornos de laboratorio.
-          </li>
-          <li>
-            Gestión estricta de listas de control de acceso (ACLs) y permisos Unix.
-          </li>
-        </ul>
-      </section>
-
-      <div class="columnas">
-        <section class="tarjeta">
-          <h2>Educación</h2>
-          <h3>TecNM Campus Acapulco</h3>
-          <p>Ingeniería en Sistemas Computacionales</p>
-          <p>No. de Control: 23320783</p>
-          <p class="fecha">7° Semestre · En curso</p>
-
-          <h3>Áreas de Laboratorio</h3>
-          <p>Redes Cisco, Compiladores, Ensamblador 8086 y Bases de Datos</p>
-          <p class="fecha">Instituto Tecnológico de Acapulco</p>
-        </section>
-
-        <section class="tarjeta">
-          <h2>Ubicación e Idiomas</h2>
-          <ul>
-            <li><strong>Ubicación:</strong> Acapulco, Guerrero, México</li>
-            <li><strong>Español:</strong> Nativo</li>
-            <li><strong>Inglés:</strong> Técnico (Lectura de especificaciones, hojas de datos y RFCs)</li>
-          </ul>
-        </section>
-      </div>
-
-      <section class="tarjeta">
-        <h2>Habilidades Técnicas</h2>
-
-        <h3>Redes y Telecomunicaciones</h3>
-        <p>
-          Diseño, conmutación avanzada y administración de topologías empresariales.
-        </p>
-        <ul class="etiquetas">
-          <li>Cisco Packet Tracer</li>
-          <li>Layer 3 Switching</li>
-          <li>VLAN Trunking</li>
-          <li>OSPF / EIGRP</li>
-          <li>Tecnologías WAN</li>
-        </ul>
-
-        <h3>Sistemas, Servidores y Hardware</h3>
-        <p>
-          Configuración en entornos Unix, protocolos industriales y microcontroladores.
-        </p>
-        <ul class="etiquetas">
-          <li>Ubuntu Server 24.04 LTS</li>
-          <li>Samba (SMB)</li>
-          <li>Ensamblador 8086</li>
-          <li>Arduino & PWM</li>
-          <li>Modbus RTU</li>
-          <li>RS-485</li>
-        </ul>
-
-        <h3>Desarrollo Web & Control de Versiones</h3>
-        <p>
-          Creación de aplicaciones web e implementación con herramientas modernas.
-        </p>
-        <ul class="etiquetas">
-          <li>HTML5 / CSS3</li>
-          <li>JavaScript</li>
-          <li>Git & GitHub</li>
-          <li>Vercel</li>
-          <li>SQL / Modelado</li>
-        </ul>
-      </section>
     </main>
-  </body>
-</html>}
+</body>
+</html>
