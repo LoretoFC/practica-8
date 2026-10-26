@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Obtener Más Información</title>
+
+    <style>
+      * {
+        box-sizing: border-box;
+        font-family: Arial, Helvetica, sans-serif; 
+      }
+      
+      body {
+        background-color: #fceceb; 
+        margin: 0; 
+        padding: 20px;
+      }
+
+      .encabezado {
+        text-align: center;
+        font-weight: bold;
+        margin-bottom: 30px;
+      }
+
+      .texto-superior {
+        color: #800020; 
+        font-size: 36px;
+        margin: 10px 0;
+      }
+
+      form {
+        max-width: 550px;
+        width: 100%;
+      }
+
+      table {
+        width: 100%;
+      }
+
+      table td {
+        padding: 8px;
+      }
+
+      input[type="text"],
+      input[type="email"],
+      textarea {
+        width: 100%;
+        max-width: 400px;
+        padding: 8px;
+        background-color: #dcedc8; 
+        border-radius: 4px;
+        border: 1px solid #b5d596; 
+      }
+      
+      input[type="submit"] {
+        padding: 10px 20px;
+        background-color: #0085c8;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        margin-top: 15px;
+        cursor: pointer;
+        font-weight: bold;
+        font-size: 15px;
+      }
+
+      a {
+        display: inline-block;
+        margin-top: 25px;
+        padding: 10px 20px;
+        background-color: #ffdf6b;
+        color: #004aad;
+        text-decoration: none;
+        font-weight: bold;
+        border-radius: 6px;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        font-size: 15px;
+      }
+
+      a:hover {
+        background-color: #ffd447;
+      }
+
+      @media (max-width: 800px) {
+        body {
+          padding: 10px;
+        }
+
+        .encabezado {
+          margin-bottom: 20px;
+        }
+
+        .texto-superior {
+          font-size: 24px;
+        }
+
+        td {
+          display: block;
+          width: 100%;
+          padding: 5px 0;
+          text-align: left;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        textarea {
+          max-width: 100%;
+          font-size: 14px;
+        }
+
+        input[type="submit"] {
+          width: 100%;
+          padding: 12px;
+          font-size: 16px;
+          margin-top: 10px;
+        }
+
+        a {
+          display: block;
+          max-width: 550px;
+          width: 100%;
+          padding: 12px;
+          font-size: 15px;
+          margin-top: 15px;
+          text-align: center;
+        }
+      }
+
+      @media (orientation: landscape) and (max-height: 500px) {
+        body {
+          padding: 10px;
+        }
+
+        .encabezado {
+          margin-bottom: 10px;
+        }
+
+        .texto-superior {
+          font-size: 20px;
+        }
+
+        td {
+          display: table-cell;
+          padding: 4px 8px;
+          font-size: 13px;
+          text-align: left;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        textarea {
+          width: 250px;
+          padding: 5px;
+        }
+
+        textarea {
+          height: 45px;
+        }
+
+        input[type="submit"] {
+          width: auto;
+          padding: 8px 16px;
+          font-size: 14px;
+          margin-top: 5px;
+        }
+
+        a {
+          margin-top: 12px;
+          padding: 8px 16px;
+          font-size: 13px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    
+    <div class="encabezado">
+      <div class="texto-superior">Obtener Más Información</div>
+    </div>
+
+    <center>
+      <form action="">
+        <table>
+          <tbody>
+            <tr>
+              <td>Ingresa tu Nombre:</td>
+              <td><input type="text" placeholder="Francisco" /></td>
+            </tr>
+            <tr>
+              <td>Ingresa tu Apellido:</td>
+              <td><input type="text" placeholder="Castellanos Loreto" /></td>
+            </tr>
+            <tr>
+              <td>Ingresa información:</td>
+              <td>
+                <textarea name="" id=""></textarea>
+              </td>
+            </tr>
+            <tr>
+              <td>Ingresa tu correo:</td>
+              <td><input type="email" placeholder="alguien1234@dominio.com" /></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>
+                <input type="submit" value="Enviar datos" />
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </form>
+
+      <a href="index.html">Regresar a la página principal</a>
+    </center>
+  </body>
+</html>

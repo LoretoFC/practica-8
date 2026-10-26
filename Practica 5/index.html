@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Práctica 5 - Modelos de IA</title>
+    
+    <style>
+      * {
+        box-sizing: border-box;
+        font-family: Arial, Helvetica, sans-serif; 
+      }
+
+      body {
+        background-color: #fceceb; 
+        color: #333;
+        margin: 0;
+        padding: 20px;
+      }
+
+      .encabezado {
+        text-align: center;
+        margin-bottom: 30px;
+      }
+
+      .caja-titulo {
+        background-color: #ffdf6b; 
+        padding: 15px 30px;
+        display: inline-block;
+        border-radius: 8px;
+        margin-bottom: 10px;
+      }
+
+      h1 {
+        margin: 0;
+        font-size: 32px;
+        color: #004aad;
+      }
+
+      h3.autor {
+        font-size: 20px;
+        color: #008080;
+        margin: 10px 0 0 0;
+      }
+
+      main {
+        width: 900px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        margin: auto;
+      }
+
+      table {
+        border-collapse: collapse;
+        width: 100%;
+        background-color: #dcedc8; 
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      }
+
+      td {
+        padding: 15px;
+        border: 1px solid #b5d596;
+        vertical-align: top;
+        text-align: center;
+      }
+
+      .titulo-ia {
+        font-size: 18px;
+        font-weight: bold;
+        color: #004aad;
+      }
+
+      .descripcion {
+        text-align: justify;
+        font-size: 14px;
+        line-height: 1.6;
+      }
+
+      a {
+        color: #004aad;
+        text-decoration: none;
+        font-weight: bold;
+      }
+
+      a:hover {
+        text-decoration: underline;
+        color: #0085c8;
+      }
+      
+      .link-info {
+        display: inline-block;
+        margin-top: 25px;
+        font-size: 18px;
+        padding: 12px 24px;
+        background-color: #ffdf6b;
+        color: #004aad;
+        border-radius: 8px;
+        font-weight: bold;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      }
+
+      .link-info:hover {
+        background-color: #ffd447;
+        text-decoration: none;
+      }
+    </style>
+  </head>
+  <body>
+    
+    <div class="encabezado">
+      <div class="caja-titulo">
+        <h1>Aplicaciones de la IA <br />Modelos</h1>
+      </div>
+      <h3 class="autor">Castellanos Loreto Francisco</h3>
+    </div>
+
+    <main>
+      <center>
+        <table>
+          <tr>
+            <td width="300px">
+              <img width="150px" src="./1.png" alt="ChatGPT" />
+            </td>
+            <td width="300px">
+              <img width="150px" src="./2.png" alt="Gemini" />
+            </td>
+            <td width="300px">
+              <img width="150px" src="./3.png" alt="Copilot" />
+            </td>
+          </tr>
+          
+          <tr>
+            <td class="titulo-ia">ChatGPT</td>
+            <td class="titulo-ia">Google Gemini</td>
+            <td class="titulo-ia">Microsoft Copilot</td>
+          </tr>
+          
+          <tr>
+            <td><a href="https://chatgpt.com/" target="_blank">https://chatgpt.com/</a></td>
+            <td><a href="https://gemini.google.com/" target="_blank">https://gemini.google.com/</a></td>
+            <td><a href="https://copilot.microsoft.com/" target="_blank">https://copilot.microsoft.com/</a></td>
+          </tr>
+          
+          <tr>
+            <td class="descripcion">
+              Plataforma conversacional creada por OpenAI, altamente eficiente para la generación de código fuente, redacción de ensayos complejos y análisis profundo de datos. Destaca por su capacidad para procesar instrucciones lógicas y resolver problemas estructurados paso a paso.
+            </td>
+            <td class="descripcion">
+              Inteligencia artificial multimodal de Google, optimizada para interactuar y comprender texto, imágenes y video de forma simultánea. Su principal fortaleza es la conexión nativa con las herramientas de productividad como Docs, Drive y Workspace.
+            </td>
+            <td class="descripcion">
+              Herramienta impulsada por IA integrada en el entorno de Microsoft. Facilita la creación rápida de imágenes a través de DALL-E y agiliza las tareas diarias al funcionar como un asistente directo en aplicaciones de Office y en el sistema operativo Windows.
+            </td>
+          </tr>
+          
+          <tr>
+            <td><strong>Modelos:</strong><br>GPT-3.5, GPT-4, GPT-4o</td>
+            <td><strong>Modelos:</strong><br>Gemini Pro, Gemini Flash, Gemini Advanced</td>
+            <td><strong>Modelos:</strong><br>Copilot Pro, GPT-4 Turbo (motor base)</td>
+          </tr>
+        </table>
+      </center>
+      
+      <a class="link-info" href="masinfo.html"> ¿Deseas obtener más información? </a>
+    </main>
+  </body>
+</html>

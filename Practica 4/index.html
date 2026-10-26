@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practica 4 - Formulario</title>
+
+    <style>
+      * {
+        box-sizing: border-box;
+        font-family: Arial, Helvetica, sans-serif; 
+      }
+      
+      body {
+        background-color: #fceceb;
+        margin: 0;
+        padding: 20px;
+      }
+
+      header {
+        text-align: center;
+        font-weight: bold;
+        margin-bottom: 40px;
+      }
+
+      h2 {
+        color: #008080; 
+        font-size: 18px;
+        margin: 10px 0;
+        font-weight: normal;
+      }
+
+      div {
+        background-color: #ffdf6b;
+        padding: 20px;
+        margin: 15px 0;
+      }
+
+      h1 {
+        color: #004aad;
+        margin: 0;
+        font-size: 40px;
+      }
+
+      table {
+        margin: 0 auto;
+      }
+
+      td {
+        padding: 8px;
+        vertical-align: top;
+        font-size: 14px;
+        color: #333;
+        line-height: 1.8;
+      }
+
+      td:first-child {
+        text-align: right;
+        padding-right: 15px;
+        font-weight: bold;
+      }
+
+      input[type="text"],
+      input[type="email"],
+      input[type="password"],
+      select,
+      textarea {
+        width: 400px;
+        padding: 8px;
+        background-color: #dcedc8;
+        border-radius: 4px;
+        border: 1px solid #b5d596;
+      }
+      
+      input[type="radio"],
+      input[type="checkbox"] {
+        margin-right: 5px;
+      }
+      
+      input[type="submit"] {
+        padding: 10px 20px;
+        background-color: #0085c8;
+        color: #fff;
+        border: none;
+        border-radius: 10px;
+        margin-top: 15px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    
+    <header>
+      <h2>Formulario de registro</h2>
+      <div>
+        <h1>Reservaciones</h1>
+      </div>
+      <h2>Castellanos Loreto Francisco</h2>
+    </header>
+
+    <form action="">
+      <table>
+        <tbody>
+          <tr>
+            <td>Ingresa tu nombre:</td>
+            <td><input type="text"></td>
+          </tr>
+          <tr>
+            <td>Ingresa tus apellidos:</td>
+            <td><input type="text"></td>
+          </tr>
+          <tr>
+            <td>Ingresa tu edad:</td>
+            <td><input type="text"></td>
+          </tr>
+          <tr>
+            <td>Ingresa tu correo e.:</td>
+            <td><input type="email" placeholder="alguien1234@dominio.com"></td>
+          </tr>
+          <tr>
+            <td>Ingresa tu clave de acceso:</td>
+            <td><input type="password"></td>
+          </tr>
+          <tr>
+            <td>Ingresa tu genero:</td>
+            <td>
+              <input type="radio" name="genero" value="masculino" id="masculino"> <label for="masculino">masculino</label>
+              <input type="radio" name="genero" value="femenino" id="femenino"> <label for="femenino">femenino</label>
+            </td>
+          </tr>
+          <tr>
+            <td>Especifica tus pasatiempos:</td>
+            <td>
+              <input type="checkbox" id="computacion"> <label for="computacion">computacion</label><br>
+              <input type="checkbox" id="negocios"> <label for="negocios">negocios</label><br>
+              <input type="checkbox" id="ia"> <label for="ia">inteligencia artificial</label><br>
+              <input type="checkbox" id="deportes"> <label for="deportes">deportes</label><br>
+              <input type="checkbox" id="viajes"> <label for="viajes">viajes</label>
+            </td>
+          </tr>
+          <tr>
+            <td>Ingresa tu estado civil:</td>
+            <td>
+              <select name="estado_civil">
+                <option value="casado/a">casado/a</option>
+                <option value="soltero/a">soltero/a</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td>Comentarios adicionales:</td>
+            <td>
+              <textarea rows="3">Opino que... </textarea>
+            </td>
+          </tr>
+          <tr>
+            <td>Ingresa tu contraseña:</td>
+            <td><input type="password"></td>
+          </tr>
+          <tr>
+            <td colspan="2" style="text-align: center;">
+              <input type="submit" value="Enviar valores">
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </form>
+
+  </body>
+</html>

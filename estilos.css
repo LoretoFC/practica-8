@@ -1,0 +1,347 @@
+:root {
+  /* Fondo estilo carbón profundo/obsidiana */
+  --bg: #0a0b0d;
+  --surface: #111318;
+  --surface-alt: #171a21;
+  --text: #e6edf3;
+  --text-bright: #ffffff;
+  --muted: #7d8590;
+  --line: #21262d;
+
+  /* Rojo intenso vibrante (solo para detalles) */
+  --accent: #d90429;
+  --accent-bright: #ff103f;
+  --accent-soft: rgba(217, 4, 41, 0.12);
+  --accent-border: rgba(217, 4, 41, 0.4);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  line-height: 1.6;
+  background-color: var(--bg);
+  color: var(--text);
+}
+
+/* Menú superior (index.html) */
+.menu-top {
+  background-color: var(--surface);
+  border-bottom: 1px solid var(--line);
+}
+
+.menu-top ul {
+  list-style: none;
+  margin: 0;
+  padding: 0 20px;
+  display: flex;
+  gap: 6px;
+  overflow-x: auto;
+}
+
+.menu-top a {
+  display: block;
+  padding: 16px 20px;
+  color: var(--muted);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.92rem;
+  letter-spacing: 0.3px;
+  white-space: nowrap;
+  transition: all 0.2s ease;
+  position: relative;
+}
+
+.menu-top a:hover {
+  color: var(--text-bright);
+}
+
+.menu-top a:hover::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 20px;
+  right: 20px;
+  height: 2px;
+  background-color: var(--accent);
+}
+
+/* Menú lateral (portafolio.html) */
+.menu-lateral {
+  width: 220px;
+  background-color: var(--surface);
+  border-right: 1px solid var(--line);
+  padding: 20px 0;
+  height: 100vh;
+  box-sizing: border-box;
+}
+
+.menu-lateral h3 {
+  margin: 0 20px 14px;
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent-bright);
+  font-weight: 700;
+}
+
+.menu-lateral ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu-lateral a {
+  display: block;
+  padding: 12px 20px;
+  color: var(--muted);
+  text-decoration: none;
+  font-size: 0.88rem;
+  transition: all 0.2s;
+  border-left: 2px solid transparent;
+}
+
+.menu-lateral a:hover {
+  background: var(--surface-alt);
+  color: var(--text-bright);
+  border-left-color: var(--accent);
+}
+
+/* Contenedor de páginas */
+.pagina {
+  max-width: 880px;
+  margin: 0 auto;
+  padding: 36px 24px 50px;
+}
+
+/* Hero Section */
+.hero {
+  background-color: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 30px;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 3px;
+  height: 100%;
+  background-color: var(--accent);
+}
+
+.hero h1 {
+  margin: 0 0 6px;
+  font-size: 2.1rem;
+  color: var(--text-bright);
+}
+
+.hero p {
+  margin: 0 0 10px;
+  color: var(--muted);
+}
+
+.rol {
+  color: var(--accent-bright) !important;
+  font-weight: 600;
+  font-size: 0.95rem;
+  letter-spacing: 0.2px;
+}
+
+/* Botones */
+.botones {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.boton {
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 6px;
+  background-color: var(--accent);
+  color: var(--text-bright);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.88rem;
+  border: 1px solid var(--accent);
+  transition: all 0.2s ease;
+}
+
+.boton:hover {
+  background-color: var(--accent-bright);
+  box-shadow: 0 0 16px rgba(217, 4, 41, 0.45);
+}
+
+.boton.sec {
+  background: transparent;
+  color: var(--text);
+  border: 1px solid var(--line);
+}
+
+.boton.sec:hover {
+  border-color: var(--accent-border);
+  background-color: var(--accent-soft);
+  color: var(--text-bright);
+  box-shadow: none;
+}
+
+/* Tarjetas */
+.tarjeta {
+  background-color: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 24px 26px;
+  margin-top: 20px;
+  transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+.tarjeta:hover {
+  border-color: var(--accent-border);
+  transform: translateY(-1px);
+}
+
+.tarjeta h2 {
+  margin: 0 0 14px;
+  font-size: 0.92rem;
+  color: var(--accent-bright);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-weight: 700;
+}
+
+.tarjeta h3 {
+  margin: 18px 0 4px;
+  font-size: 1.05rem;
+  color: var(--text-bright);
+}
+
+.tarjeta h3:first-of-type {
+  margin-top: 0;
+}
+
+.tarjeta p {
+  margin: 0 0 8px;
+  color: var(--muted);
+  font-size: 0.94rem;
+}
+
+.tarjeta a {
+  color: var(--accent-bright);
+  text-decoration: none;
+}
+
+.fecha {
+  color: var(--accent-bright);
+  font-size: 0.82rem;
+  font-weight: 600;
+  margin: 0 0 8px;
+}
+
+ul {
+  padding-left: 1.2rem;
+  color: var(--muted);
+}
+
+li {
+  margin-bottom: 0.35rem;
+  font-size: 0.93rem;
+}
+
+/* Etiquetas técnicas */
+.etiquetas {
+  list-style: none;
+  padding: 0 !important;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.etiquetas li {
+  background-color: var(--surface-alt);
+  border: 1px solid var(--line);
+  color: var(--text);
+  border-radius: 6px;
+  padding: 4px 11px;
+  font-size: 0.8rem;
+  letter-spacing: 0.2px;
+  margin-bottom: 0;
+}
+
+.columnas {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+.columnas .tarjeta {
+  margin-top: 20px;
+}
+
+/* Formulario */
+.formulario label {
+  display: block;
+  font-weight: 600;
+  font-size: 0.88rem;
+  margin: 14px 0 6px;
+  color: var(--text);
+}
+
+.formulario input,
+.formulario textarea {
+  width: 100%;
+  padding: 11px 14px;
+  font: inherit;
+  font-size: 0.92rem;
+  color: var(--text-bright);
+  background-color: var(--bg);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.formulario textarea {
+  min-height: 130px;
+  resize: vertical;
+}
+
+.formulario input:focus,
+.formulario textarea:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px var(--accent-soft);
+}
+
+.formulario button {
+  margin-top: 18px;
+  padding: 11px 24px;
+  font: inherit;
+  font-weight: 600;
+  font-size: 0.92rem;
+  cursor: pointer;
+  border: none;
+  border-radius: 6px;
+  background-color: var(--accent);
+  color: var(--text-bright);
+  transition: all 0.2s ease;
+}
+
+.formulario button:hover {
+  background-color: var(--accent-bright);
+  box-shadow: 0 0 16px rgba(217, 4, 41, 0.45);
+}
+
+@media (max-width: 600px) {
+  .menu-lateral {
+    width: 120px;
+  }
+}
