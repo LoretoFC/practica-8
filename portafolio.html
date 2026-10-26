@@ -3,24 +3,124 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Prácticas | Francisco Castellanos</title>
-    <link rel="stylesheet" href="estilos.css">
+    <title>Laboratorio de Prácticas</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html, body {
+            height: 100%;
+            width: 100%;
+            overflow: hidden;
+            background-color: #090a0d;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        }
+
+        /* Estructura dividida en dos columnas: menú a la izquierda y visor a la derecha */
+        .contenedor-portafolio {
+            display: flex;
+            height: 100vh;
+            width: 100%;
+        }
+
+        /* Barra lateral izquierda */
+        .sidebar-practicas {
+            width: 130px;
+            min-width: 110px;
+            background-color: #101217;
+            border-right: 1px solid #1f2430;
+            display: flex;
+            flex-direction: column;
+            padding: 14px 10px;
+            overflow-y: auto;
+            flex-shrink: 0;
+        }
+
+        .titulo-sidebar {
+            font-size: 0.72rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #ff1a3d;
+            margin-bottom: 14px;
+            text-align: center;
+        }
+
+        .lista-practicas {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            width: 100%;
+        }
+
+        .lista-practicas a {
+            display: block;
+            text-align: center;
+            padding: 10px 6px;
+            font-size: 0.82rem;
+            font-weight: 600;
+            color: #8b95a5;
+            text-decoration: none;
+            background-color: #151821;
+            border: 1px solid #1f2430;
+            border-radius: 8px;
+            transition: all 0.2s ease;
+        }
+
+        .lista-practicas a:hover,
+        .lista-practicas a:focus {
+            color: #ffffff;
+            background-color: #1b202c;
+            border-color: #e60026;
+            box-shadow: 0 0 10px rgba(230, 0, 38, 0.25);
+        }
+
+        /* Marco donde carga la práctica seleccionada */
+        .marco-visor {
+            flex: 1;
+            height: 100%;
+            border: none;
+            background-color: #ffffff;
+        }
+
+        @media (max-width: 480px) {
+            .sidebar-practicas {
+                width: 95px;
+                min-width: 85px;
+                padding: 10px 6px;
+            }
+
+            .lista-practicas a {
+                padding: 8px 4px;
+                font-size: 0.76rem;
+            }
+        }
+    </style>
 </head>
-<body style="margin: 0; padding: 0; overflow: hidden; background: #090a0d;">
-    <div class="portafolio-shell">
-        <nav class="practice-deck">
-            <span class="deck-title">Prácticas</span>
-            <ul class="deck-nav">
-                <li><a href="Practica%201/index.html" target="visorPracticas">P1</a></li>
-                <li><a href="Practica%202/index.html" target="visorPracticas">P2</a></li>
-                <li><a href="Practica%203/index.html" target="visorPracticas">P3</a></li>
-                <li><a href="Practica%204/index.html" target="visorPracticas">P4</a></li>
-                <li><a href="Practica%205/index.html" target="visorPracticas">P5</a></li>
-                <li><a href="Practica%206/index.html" target="visorPracticas">P6</a></li>
-                <li><a href="Practica%207/index.html" target="visorPracticas">P7</a></li>
+<body>
+    <div class="contenedor-portafolio">
+        
+        <!-- Menú vertical a la izquierda -->
+        <aside class="sidebar-practicas">
+            <span class="titulo-sidebar">Prácticas</span>
+            <ul class="lista-practicas">
+                <li><a href="Practica%201/index.html" target="visorPracticas">Práctica 1</a></li>
+                <li><a href="Practica%202/index.html" target="visorPracticas">Práctica 2</a></li>
+                <li><a href="Practica%203/index.html" target="visorPracticas">Práctica 3</a></li>
+                <li><a href="Practica%204/index.html" target="visorPracticas">Práctica 4</a></li>
+                <li><a href="Practica%205/index.html" target="visorPracticas">Práctica 5</a></li>
+                <li><a href="Practica%206/index.html" target="visorPracticas">Práctica 6</a></li>
+                <li><a href="Practica%207/index.html" target="visorPracticas">Práctica 7</a></li>
             </ul>
-        </nav>
-        <iframe name="visorPracticas" class="deck-frame" src="Practica%201/index.html" title="Visor de Prácticas"></iframe>
+        </aside>
+
+        <!-- Visor a la derecha -->
+        <iframe name="visorPracticas" class="marco-visor" src="Practica%201/index.html" title="Visualizador de Prácticas"></iframe>
+
     </div>
 </body>
 </html>
