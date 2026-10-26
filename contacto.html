@@ -3,18 +3,88 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contacto</title>
+    <title>Contacto | Francisco Castellanos Loreto</title>
     <link rel="stylesheet" href="estilos.css">
+    <style>
+        .contact-links {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-top: 14px;
+        }
+        .contact-btn {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: #0d0f14;
+            border: 1px solid var(--border-dim);
+            color: var(--text-main);
+            text-decoration: none;
+            padding: 10px 14px;
+            border-radius: 8px;
+            font-size: 0.85rem;
+            transition: all 0.2s ease;
+            word-break: break-all;
+        }
+        .contact-btn:hover {
+            border-color: var(--red-accent);
+            color: #ffffff;
+            background: var(--bg-card-hover);
+        }
+        .contact-btn span.badge {
+            background: rgba(230, 0, 38, 0.15);
+            color: var(--red-bright);
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 0.72rem;
+            font-weight: 600;
+            white-space: nowrap;
+        }
+        /* Corrección para que los inputs no se salgan ni se encimen */
+        .form-block {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            width: 100%;
+        }
+        .form-block label {
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 4px;
+            display: block;
+        }
+        .form-block input,
+        .form-block textarea {
+            width: 100%;
+            background: #0d0f14;
+            border: 1px solid var(--border-dim);
+            color: #ffffff;
+            padding: 10px 12px;
+            border-radius: 8px;
+            font-size: 0.9rem;
+            font-family: inherit;
+            display: block;
+        }
+        .form-block input:focus,
+        .form-block textarea:focus {
+            outline: none;
+            border-color: var(--red-accent);
+        }
+    </style>
 </head>
 <body>
     <main class="workspace">
         <div class="contact-grid">
             
+            <!-- Tarjeta de Información y Enlaces Directos -->
             <div class="contact-card">
                 <span class="bento-badge">Canales Directos</span>
-                <h1 style="font-size: 1.8rem; margin: 0.5rem 0 1rem; color: #fff;">Contacto Técnico</h1>
-                <p style="color: var(--text-muted); font-size: 0.92rem; margin-bottom: 1.5rem;">
-                    Disponible para consultas académicas, proyectos de ingeniería en sistemas o asesoría en configuración de redes y servidores.
+                <h1 style="font-size: 1.8rem; margin: 0.5rem 0 0.8rem; color: #fff;">Contacto Técnico</h1>
+                <p style="color: var(--text-muted); font-size: 0.92rem; margin-bottom: 1.2rem;">
+                    Disponible para consultas académicas, proyectos de ingeniería en sistemas o infraestructura de redes.
                 </p>
                 
                 <div class="meta-row">
@@ -22,30 +92,46 @@
                     <p class="meta-value">Francisco Castellanos Loreto</p>
                 </div>
                 <div class="meta-row">
+                    <span class="meta-label">Campus</span>
+                    <p class="meta-value">TecNM Campus Acapulco · Control 23320783</p>
+                </div>
+                <div class="meta-row">
                     <span class="meta-label">Ubicación</span>
                     <p class="meta-value">Acapulco, Guerrero, México</p>
                 </div>
-                <div class="meta-row">
-                    <span class="meta-label">Campus</span>
-                    <p class="meta-value">Instituto Tecnológico de Acapulco (TecNM)</p>
+
+                <div class="contact-links">
+                    <a href="mailto:franciscoscl6187@gmail.com" class="contact-btn">
+                        <span>franciscoscl6187@gmail.com</span>
+                        <span class="badge">Email</span>
+                    </a>
+                    <a href="https://github.com/LoretoFC" target="_blank" rel="noopener noreferrer" class="contact-btn">
+                        <span>github.com/LoretoFC</span>
+                        <span class="badge">GitHub</span>
+                    </a>
+                    <a href="https://github.com/LoretoFC/practica-8" target="_blank" rel="noopener noreferrer" class="contact-btn">
+                        <span>Repositorio: practica-8</span>
+                        <span class="badge">Código</span>
+                    </a>
                 </div>
             </div>
 
+            <!-- Formulario con espaciado vertical corregido -->
             <div class="contact-card">
-                <form action="#" method="post" onsubmit="event.preventDefault(); alert('Mensaje registrado.');">
-                    <div class="input-field">
+                <form action="#" method="post" onsubmit="event.preventDefault(); alert('Mensaje registrado.');" class="form-block">
+                    <div>
                         <label for="name">Tu Nombre</label>
                         <input type="text" id="name" placeholder="Nombre completo" required>
                     </div>
-                    <div class="input-field">
+                    <div>
                         <label for="email">Tu Correo</label>
                         <input type="email" id="email" placeholder="correo@ejemplo.com" required>
                     </div>
-                    <div class="input-field">
+                    <div>
                         <label for="msg">Mensaje</label>
-                        <textarea id="msg" placeholder="Escribe tu consulta o propuesta..." required></textarea>
+                        <textarea id="msg" rows="4" placeholder="Escribe tu mensaje..." required></textarea>
                     </div>
-                    <button type="submit" class="btn-pill" style="cursor: pointer; width: 100%; justify-content: center;">
+                    <button type="submit" class="btn-pill" style="cursor: pointer; width: 100%; justify-content: center; margin-top: 6px;">
                         Enviar Consulta
                     </button>
                 </form>
