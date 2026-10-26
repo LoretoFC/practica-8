@@ -3,39 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portafolio | Francisco Castellanos Loreto</title>
+    <title>Francisco Castellanos | ISC Portfolio</title>
     <link rel="stylesheet" href="estilos.css">
     <style>
         html, body { 
             height: 100%; 
-            margin: 0;
-            padding: 0;
+            margin: 0; 
+            padding: 0; 
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
         }
-        body { 
-            display: flex; 
-            flex-direction: column; 
-        }
-        iframe { 
-            flex: 1; 
-            width: 100%; 
-            border: 0; 
+        .main-frame {
+            flex: 1;
+            width: 100%;
+            border: none;
         }
     </style>
 </head>
 <body>
 
-    <!-- Menú de navegación horizontal -->
-    <nav class="menu-top">
-        <ul>
-            <li><a href="inicio.html" target="miFrame">Inicio</a></li>
-            <li><a href="sobre.html" target="miFrame">Sobre mí</a></li>
-            <li><a href="portafolio.html" target="miFrame">Portafolio</a></li>
-            <li><a href="contacto.html" target="miFrame">Contacto</a></li>
+    <header class="nav-shell">
+        <div class="nav-brand">
+            <span class="brand-dot"></span>
+            <span>F. CASTELLANOS // ISC</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="inicio.html" target="vistaFrame">Inicio</a></li>
+            <li><a href="sobre.html" target="vistaFrame">Perfil</a></li>
+            <li><a href="portafolio.html" target="vistaFrame">Prácticas</a></li>
+            <li><a href="contacto.html" target="vistaFrame">Contacto</a></li>
         </ul>
-    </nav>
+    </header>
 
-    <!-- Iframe donde se carga el contenido -->
-    <iframe name="miFrame" src="inicio.html" title="Contenido"></iframe>
+    <iframe name="vistaFrame" class="main-frame" src="inicio.html" title="Visualizador de contenidos"></iframe>
 
 </body>
 </html>
