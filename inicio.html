@@ -1,65 +1,143 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inicio</title>
+    <title>Inicio | Francisco Castellanos Loreto</title>
     <link rel="stylesheet" href="estilos.css">
+    <style>
+        .contenedor-inicio {
+            max-width: 820px;
+            margin: 0 auto;
+            padding: 24px 16px;
+        }
+
+        .portada-escolar {
+            background-color: #12141a;
+            border: 1px solid #1f2430;
+            border-left: 4px solid #e60026;
+            border-radius: 8px;
+            padding: 24px 20px;
+            margin-bottom: 24px;
+        }
+
+        .portada-escolar h1 {
+            font-size: 1.5rem;
+            color: #ffffff;
+            margin-bottom: 6px;
+        }
+
+        .portada-escolar .subtitulo {
+            color: #e60026;
+            font-size: 0.95rem;
+            font-weight: 600;
+            margin-bottom: 14px;
+            display: block;
+        }
+
+        .portada-escolar p {
+            color: #94a3b8;
+            font-size: 0.95rem;
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        .seccion-tarjetas {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 16px;
+            margin-bottom: 24px;
+        }
+
+        .tarjeta-modulo {
+            background-color: #12141a;
+            border: 1px solid #1f2430;
+            border-radius: 8px;
+            padding: 18px;
+        }
+
+        .tarjeta-modulo h3 {
+            font-size: 1.05rem;
+            color: #ffffff;
+            margin-bottom: 8px;
+        }
+
+        .tarjeta-modulo p {
+            color: #8b95a5;
+            font-size: 0.88rem;
+            line-height: 1.5;
+            margin: 0;
+        }
+
+        .guia-navegacion {
+            background-color: #0f1117;
+            border: 1px solid #1f2430;
+            border-radius: 8px;
+            padding: 20px;
+        }
+
+        .guia-navegacion h2 {
+            font-size: 1.1rem;
+            color: #ffffff;
+            margin-bottom: 12px;
+        }
+
+        .guia-navegacion ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .guia-navegacion li {
+            color: #94a3b8;
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+
+        .guia-navegacion strong {
+            color: #e60026;
+        }
+    </style>
 </head>
 <body>
-    <main class="workspace">
+    <main class="contenedor-inicio">
         
-        <!-- BENTO ROW 1: Hero + Live Terminal Status -->
-        <section class="bento-hero">
-            <div class="bento-card">
-                <span class="bento-badge">Ingeniería en Sistemas Computacionales</span>
-                <h1>Francisco Castellanos Loreto</h1>
-                <p>
-                    Séptimo semestre en el TecNM Campus Acapulco. Formación integral en infraestructura de telecomunicaciones, diseño de redes multicapa y desarrollo de software con control de versiones.
-                </p>
-                <div class="action-cluster">
-                    <a class="btn-pill" href="portafolio.html">Explorar Prácticas</a>
-                    <a class="btn-pill ghost" href="sobre.html">Ver Trayectoria</a>
-                </div>
-            </div>
+        <header class="portada-escolar">
+            <h1>Francisco Castellanos Loreto</h1>
+            <span class="subtitulo">Ingeniería en Sistemas Computacionales · 7° Semestre</span>
+            <p>
+                Portafolio web elaborado para la materia de Programación Web en el Instituto Tecnológico de Acapulco (TecNM). En este espacio se integran las prácticas y ejercicios desarrollados durante el curso, aplicando estructura HTML5, estilos con CSS responsivo y navegación modular.
+            </p>
+        </header>
 
-            <div class="terminal-card">
-                <div class="terminal-header">
-                    <span class="t-dot red"></span>
-                    <span class="t-dot"></span>
-                    <span class="t-dot"></span>
-                </div>
-                <div class="terminal-body">
-                    <p><span class="cmd">sys:~$</span> whoami</p>
-                    <p><span class="val">&gt; Francisco Castellanos (Loreto)</span></p>
-                    <br>
-                    <p><span class="cmd">sys:~$</span> status --academic</p>
-                    <p><span class="val">&gt; 7mo Semestre (Matrícula: 23320783)</span></p>
-                    <p><span class="val">&gt; TecNM Campus Acapulco</span></p>
-                    <br>
-                    <p><span class="cmd">sys:~$</span> cat core_stack.txt</p>
-                    <p><span class="val">&gt; Cisco L3, VLANs, OSPF, Samba</span></p>
-                    <p><span class="val">&gt; Arduino PWM, RS-485, Web Dev</span></p>
-                </div>
+        <section class="seccion-tarjetas">
+            <div class="tarjeta-modulo">
+                <h3>Diseño Web</h3>
+                <p>Estructuración de interfaces, uso de media queries para adaptación a pantallas móviles y hojas de estilo centralizadas.</p>
+            </div>
+            <div class="tarjeta-modulo">
+                <h3>Redes y Conmutación</h3>
+                <p>Prácticas de laboratorio con topologías en Cisco Packet Tracer, switches multicapa, asignación de VLANs y enrutamiento.</p>
+            </div>
+            <div class="tarjeta-modulo">
+                <h3>Servidores y Prácticas</h3>
+                <p>Administración de entornos en Ubuntu Server, compartición de archivos en red local y programación básica para web.</p>
             </div>
         </section>
 
-        <!-- BENTO ROW 2: 3 Módulos de especialidad -->
-        <section class="quad-grid">
-            <div class="quad-item">
-                <h3>Redes & Enrutamiento</h3>
-                <p>Topologías empresariales con Cisco Packet Tracer, enrutamiento dinámico OSPF y EIGRP, switches Layer 3 y redundancia de enlaces.</p>
-            </div>
-            <div class="quad-item">
-                <h3>Sistemas & Servidores</h3>
-                <p>Administración en Ubuntu Server 24.04 LTS, implementación de Samba SMB con políticas de solo lectura y control estricto de accesos.</p>
-            </div>
-            <div class="quad-item">
-                <h3>Hardware & Protocolos</h3>
-                <p>Integración de microcontroladores Arduino con señalización PWM y bus industrial RS-485 bajo el estándar Modbus RTU.</p>
-            </div>
+        <section class="guia-navegacion">
+            <h2>Secciones de la Práctica 8</h2>
+            <ul>
+                <li><strong>Perfil:</strong> Resumen de datos del estudiante, matrícula escolar y proyectos trabajados en la carrera.</li>
+                <li><strong>Prácticas:</strong> Menú con acceso y visualización directa de las prácticas 1 a la 7.</li>
+                <li><strong>Contacto:</strong> Información de comunicación, enlace al repositorio en GitHub y formulario de consulta.</li>
+            </ul>
         </section>
 
     </main>
 </body>
 </html>
+
