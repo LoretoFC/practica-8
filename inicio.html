@@ -5,42 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inicio</title>
     <link rel="stylesheet" href="estilos.css">
-    <style>
-        .spec-item {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 8px 0;
-            border-bottom: 1px solid var(--border-dim);
-            font-size: 0.85rem;
-        }
-        .spec-item:last-child {
-            border-bottom: none;
-            padding-bottom: 0;
-        }
-        .spec-label {
-            color: var(--text-muted);
-            font-weight: 500;
-        }
-        .spec-val {
-            color: #ffffff;
-            font-weight: 600;
-        }
-        .spec-val.red {
-            color: var(--red-bright);
-        }
-    </style>
 </head>
 <body>
     <main class="workspace">
         
-        <!-- BENTO ROW 1: Hero Principal + Ficha de Datos Directos -->
+        <!-- BENTO ROW 1: Hero + Terminal Box -->
         <section class="bento-hero">
             <div class="bento-card">
                 <span class="bento-badge">Ingeniería en Sistemas Computacionales</span>
                 <h1>Francisco Castellanos Loreto</h1>
                 <p>
-                    Estudiante del séptimo semestre en el TecNM Campus Acapulco. Espacio enfocado en la documentación de prácticas de programación web, infraestructura de redes, virtualización y control de versiones.
+                    Séptimo semestre en el TecNM Campus Acapulco. Formación integral en infraestructura de telecomunicaciones, diseño de redes multicapa y desarrollo de software con control de versiones.
                 </p>
                 <div class="action-cluster">
                     <a class="btn-pill" href="portafolio.html">Explorar Prácticas</a>
@@ -48,48 +23,28 @@
                 </div>
             </div>
 
-            <!-- Panel lateral estilizado con datos directos y claros -->
             <div class="terminal-card">
                 <div class="terminal-header">
                     <span class="t-dot red"></span>
                     <span class="t-dot"></span>
                     <span class="t-dot"></span>
                 </div>
-                
-                <div style="margin-bottom: 12px;">
-                    <span style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px; color: var(--red-bright); font-weight: 700;">
-                        Ficha Técnica Estudiantil
-                    </span>
-                </div>
-
-                <div class="spec-item">
-                    <span class="spec-label">Estudiante:</span>
-                    <span class="spec-val">F. Castellanos Loreto</span>
-                </div>
-                <div class="spec-item">
-                    <span class="spec-label">No. Control:</span>
-                    <span class="spec-val">23320783</span>
-                </div>
-                <div class="spec-item">
-                    <span class="spec-label">Semestre:</span>
-                    <span class="spec-val">7° Semestre</span>
-                </div>
-                <div class="spec-item">
-                    <span class="spec-label">Institución:</span>
-                    <span class="spec-val">TecNM Campus Acapulco</span>
-                </div>
-                <div class="spec-item">
-                    <span class="spec-label">Materia:</span>
-                    <span class="spec-val">Programación Web</span>
-                </div>
-                <div class="spec-item">
-                    <span class="spec-label">Estado:</span>
-                    <span class="spec-val red">Activo // Entrega P8</span>
+                <div class="terminal-body">
+                    <p><span class="cmd">Nombre:</span></p>
+                    <p><span class="val">&gt; Francisco Castellanos (Loreto)</span></p>
+                    <br>
+                    <p><span class="cmd">Estatus Académico:</span></p>
+                    <p><span class="val">&gt; 7mo Semestre (Matrícula: 23320783)</span></p>
+                    <p><span class="val">&gt; TecNM Campus Acapulco</span></p>
+                    <br>
+                    <p><span class="cmd">Prácticas Elaboradas:</span></p>
+                    <p><span class="val">&gt; Cisco L3, VLANS, OSPF, Samba</span></p>
+                    <p><span class="val">&gt; Arduino PWM, RS-485, Web Dev</span></p>
                 </div>
             </div>
         </section>
 
-        <!-- BENTO ROW 2: Tres áreas de especialidad -->
+        <!-- BENTO ROW 2: Módulos de especialidad -->
         <section class="quad-grid">
             <div class="quad-item">
                 <h3>Redes & Enrutamiento</h3>
