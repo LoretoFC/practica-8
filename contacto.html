@@ -1,60 +1,57 @@
 <!doctype html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contacto</title>
-    <link rel="stylesheet" href="estilos.css" />
-  </head>
-  <body>
-    <main class="pagina">
-      <section class="tarjeta" style="margin-top: 0">
-        <h2>Contacto</h2>
-        <p>
-          ¿Tienes alguna consulta técnica, duda sobre mis prácticas o propuesta de colaboración? 
-          Envíame un mensaje mediante el formulario o ponte en contacto directo:
-        </p>
-        <p style="margin-top: 0.8rem; color: var(--text);">
-          <strong>Francisco Castellanos Loreto</strong><br>
-          <span style="color: var(--muted); font-size: 0.9rem;">Acapulco, Guerrero, México &bull; Estudiante de ISC en TecNM Campus Acapulco</span>
-        </p>
-      </section>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <main class="workspace">
+        <div class="contact-grid">
+            
+            <div class="contact-card">
+                <span class="bento-badge">Canales Directos</span>
+                <h1 style="font-size: 1.8rem; margin: 0.5rem 0 1rem; color: #fff;">Contacto Técnico</h1>
+                <p style="color: var(--text-muted); font-size: 0.92rem; margin-bottom: 1.5rem;">
+                    Disponible para consultas académicas, proyectos de ingeniería en sistemas o asesoría en configuración de redes y servidores.
+                </p>
+                
+                <div class="meta-row">
+                    <span class="meta-label">Estudiante</span>
+                    <p class="meta-value">Francisco Castellanos Loreto</p>
+                </div>
+                <div class="meta-row">
+                    <span class="meta-label">Ubicación</span>
+                    <p class="meta-value">Acapulco, Guerrero, México</p>
+                </div>
+                <div class="meta-row">
+                    <span class="meta-label">Campus</span>
+                    <p class="meta-value">Instituto Tecnológico de Acapulco (TecNM)</p>
+                </div>
+            </div>
 
-      <section class="tarjeta">
-        <h2>Envíame un mensaje</h2>
+            <div class="contact-card">
+                <form action="#" method="post" onsubmit="event.preventDefault(); alert('Mensaje registrado.');">
+                    <div class="input-field">
+                        <label for="name">Tu Nombre</label>
+                        <input type="text" id="name" placeholder="Nombre completo" required>
+                    </div>
+                    <div class="input-field">
+                        <label for="email">Tu Correo</label>
+                        <input type="email" id="email" placeholder="correo@ejemplo.com" required>
+                    </div>
+                    <div class="input-field">
+                        <label for="msg">Mensaje</label>
+                        <textarea id="msg" placeholder="Escribe tu consulta o propuesta..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn-pill" style="cursor: pointer; width: 100%; justify-content: center;">
+                        Enviar Consulta
+                    </button>
+                </form>
+            </div>
 
-        <form
-          class="formulario"
-          action="#"
-          method="post"
-          onsubmit="event.preventDefault(); alert('Mensaje enviado correctamente.');"
-        >
-          <label for="nombre">Nombre completo</label>
-          <input
-            type="text"
-            id="nombre"
-            name="Nombre completo"
-            autocomplete="name"
-            placeholder="Tu nombre completo"
-            required
-          />
-
-          <label for="correo">Correo electrónico</label>
-          <input
-            type="email"
-            id="correo"
-            name="Correo"
-            autocomplete="email"
-            placeholder="tucorreo@ejemplo.com"
-            required
-          />
-
-          <label for="mensaje">Mensaje</label>
-          <textarea id="mensaje" name="Mensaje" placeholder="Escribe tu mensaje..." required></textarea>
-
-          <button type="submit">Enviar mensaje</button>
-        </form>
-      </section>
+        </div>
     </main>
-  </body>
+</body>
 </html>
