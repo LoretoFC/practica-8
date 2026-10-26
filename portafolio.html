@@ -1,58 +1,31 @@
 <!doctype html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portafolio</title>
-    <link rel="stylesheet" href="estilos.css" />
-    <style>
-      html,
-      body {
-        height: 100%;
-        margin: 0;
-        padding: 0;
-        overflow: hidden;
-      }
-      body {
-        display: flex;
-      }
-      iframe {
-        flex: 1;
-        border: 0;
-        height: 100%;
-      }
-    </style>
-  </head>
-  <body>
-    <!-- Menú vertical a la izquierda -->
-    <nav class="menu-lateral">
-      <h3>Mis Prácticas</h3>
-      <ul>
-        <li>
-          <a href="Practica%201/index.html" target="frameProyecto">Práctica 1</a>
-        </li>
-        <li>
-          <a href="Practica%202/index.html" target="frameProyecto">Práctica 2</a>
-        </li>
-        <li>
-          <a href="Practica%203/index.html" target="frameProyecto">Práctica 3</a>
-        </li>
-        <li>
-          <a href="Practica%204/index.html" target="frameProyecto">Práctica 4</a>
-        </li>
-        <li>
-          <a href="Practica%205/index.html" target="frameProyecto">Práctica 5</a>
-        </li>
-        <li>
-          <a href="Practica%206/index.html" target="frameProyecto">Práctica 6</a>
-        </li>
-        <li>
-          <a href="Practica%207/index.html" target="frameProyecto">Práctica 7</a>
-        </li>
-      </ul>
-    </nav>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laboratorio de Prácticas</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <div class="portafolio-shell">
+        
+        <!-- Pestañas horizontales superiores en lugar de barra vertical -->
+        <nav class="practice-deck">
+            <span class="deck-title">Prácticas ISC</span>
+            <ul class="deck-nav">
+                <li><a href="Practica%201/index.html" target="visorPracticas">Práctica 01</a></li>
+                <li><a href="Practica%202/index.html" target="visorPracticas">Práctica 02</a></li>
+                <li><a href="Practica%203/index.html" target="visorPracticas">Práctica 03</a></li>
+                <li><a href="Practica%204/index.html" target="visorPracticas">Práctica 04</a></li>
+                <li><a href="Practica%205/index.html" target="visorPracticas">Práctica 05</a></li>
+                <li><a href="Practica%206/index.html" target="visorPracticas">Práctica 06</a></li>
+                <li><a href="Practica%207/index.html" target="visorPracticas">Práctica 07</a></li>
+            </ul>
+        </nav>
 
-    <!-- Iframe donde se cargan los proyectos -->
-    <iframe name="frameProyecto" src="Practica%201/index.html" title="Proyecto"></iframe>
-  </body>
+        <!-- Contenedor del visor -->
+        <iframe name="visorPracticas" class="deck-frame" src="Practica%201/index.html" title="Visualizador de Prácticas"></iframe>
+
+    </div>
+</body>
 </html>
